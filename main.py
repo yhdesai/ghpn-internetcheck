@@ -10,7 +10,7 @@ def connected_to_internet(url='http://www.google.com/', timeout=5):
         return True
     except requests.ConnectionError:
         print("No internet connection available.")
-        r = requests.get('http://192.168.2.11:5000/say/?text=The+internet+is+down')
+        r = requests.get('http://192.168.2.10:5000/say/?text=The+internet+is+down')
         print(r.status_code)
     return False
 
